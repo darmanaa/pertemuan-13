@@ -1,53 +1,134 @@
-# Native Power App (Profile-style)
+# Native Power App
 
-A small Expo app demonstrating camera + location native features, permission flow, and persistence.
+## Deskripsi Aplikasi
 
-## Fitur
-- Ambil foto via Kamera atau pilih dari Galeri (permission flow)
-- Ambil koordinat lokasi saat foto diambil (GPS)
-- Persistensi: foto + koordinat disimpan di AsyncStorage dan dimuat saat app dibuka
-- Buka koordinat di Google Maps
-- Tombol reset untuk menghapus data
+Native Power App adalah aplikasi React Native berbasis Expo yang memungkinkan pengguna mengambil foto menggunakan kamera atau memilih foto dari galeri, kemudian menyimpan foto beserta koordinat lokasi GPS ke penyimpanan lokal menggunakan AsyncStorage.
 
-Level 2: Camera + Location (digabung) dan Persistensi (AsyncStorage)
+Data yang telah disimpan akan tetap tersedia meskipun aplikasi ditutup dan dibuka kembali. Pengguna juga dapat membuka lokasi pada Google Maps serta menghapus data yang tersimpan.
 
-## Cara Menjalankan
+---
 
-1. Install dependencies:
+## Native Features yang Digunakan
+
+* 📷 Camera (expo-image-picker)
+* 🖼️ Image Library / Gallery (expo-image-picker)
+* 📍 GPS Location (expo-location)
+* 💾 AsyncStorage (@react-native-async-storage/async-storage)
+* 🔗 Deep Linking (Google Maps)
+* 🔐 Permission Handling (Camera, Gallery, dan Location)
+
+---
+
+# Daftar Fitur
+
+## Level 1
+
+* ✅ Mengambil foto menggunakan kamera
+* ✅ Memilih foto dari galeri
+* ✅ Menampilkan hasil foto
+* ✅ Meminta izin kamera
+* ✅ Meminta izin galeri
+
+## Level 2 ✅
+
+* ✅ Mengambil koordinat GPS saat foto dipilih
+* ✅ Menyimpan foto dan lokasi menggunakan AsyncStorage
+* ✅ Data tetap tersimpan setelah aplikasi dibuka kembali
+* ✅ Membuka lokasi di Google Maps
+* ✅ Menampilkan dialog ketika izin ditolak
+* ✅ Tombol Reset untuk menghapus seluruh data
+
+---
+
+# Screenshot
+
+## 1. Hasil Foto dan Lokasi
+
+> Tambahkan screenshot yang menampilkan foto serta koordinat GPS.
+
+Contoh:
+
+```
+<a href="https://ibb.co.com/MxNqxQ29"><img src="https://i.ibb.co.com/MxNqxQ29/Whats-App-Image-2026-06-28-at-05-18-06.jpg" alt="Whats-App-Image-2026-06-28-at-05-18-06" border="0"></a>
+```
+
+---
+
+## 2. Dialog Izin Kamera / Lokasi
+
+> Tambahkan screenshot dialog permission.
+
+Contoh:
+
+```
+<a href="https://ibb.co.com/hFZQrqTF"><img src="https://i.ibb.co.com/hFZQrqTF/Whats-App-Image-2026-06-28-at-05-18-05.jpg" alt="Whats-App-Image-2026-06-28-at-05-18-05" border="0"></a>
+```
+
+---
+
+## 3. Penanganan Penolakan Izin
+
+> Tambahkan screenshot Alert ketika pengguna menolak izin dan tombol **Buka Pengaturan**.
+
+Contoh:
+
+```
+<a href="https://ibb.co.com/S7rQ4yND"><img src="https://i.ibb.co.com/S7rQ4yND/Whats-App-Image-2026-06-28-at-05-18-07.jpg" alt="Whats-App-Image-2026-06-28-at-05-18-07" border="0"></a>
+```
+
+---
+
+# Cara Menjalankan
+
+Clone repository
+
+```bash
+git clone <repository-url>
+```
+
+Masuk ke folder project
+
+```bash
+cd profile-card
+```
+
+Install dependency
 
 ```bash
 npm install
 ```
 
-2. Jalankan Expo:
+Jalankan Expo
 
 ```bash
 npx expo start
 ```
 
-3. Scan QR dengan Expo Go pada HP fisik.
+Scan QR Code menggunakan aplikasi Expo Go.
 
-Catatan: Pastikan mengizinkan akses Kamera, Galeri, dan Lokasi saat diminta.
+---
 
-## Test Case yang Disarankan
-- Ambil foto lewat Kamera → lihat foto tampil + koordinat muncul
-- Pilih foto dari Galeri → lihat foto tampil + koordinat muncul
-- Tolak izin Kamera/Lokasi → harus muncul Alert dan tidak crash
-- Tekan `Buka di Maps` untuk membuka lokasi di Google Maps
+# Tech Stack
 
-## Expo Snack
-Tambahkan kode ini ke https://snack.expo.dev/ untuk demo cepat.
+* React Native
+* Expo SDK 54
+* Expo Image Picker
+* Expo Location
+* AsyncStorage
+* JavaScript
 
-## Commit Guidelines
-Gunakan Conventional Commits, contoh:
+---
+
+# Link Expo Snack
+
+Tambahkan link Expo Snack di bawah ini.
 
 ```
-feat: add camera + location persistence
+https://snack.expo.dev/xxxxxxxx
 ```
 
-## Files
-- `App.js` — implementasi utama
-- `package.json` — dependencies (expo-image-picker, expo-location, async-storage)
+---
 
-## Next Steps / Bonus
-- Tambahkan reverse geocoding atau integrasi API cuaca untuk nilai lebih.
+# Author
+
+Nama: DARMAN Michael
